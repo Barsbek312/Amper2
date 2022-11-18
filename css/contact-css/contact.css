@@ -173,4 +173,10 @@ main {
     width: 25%;
   }
 }
+
+@media screen and (max-height: 820px) {
+  footer {
+    position: relative;
+  }
+}
 /*# sourceMappingURL=contact.css.map */
