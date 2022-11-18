@@ -1,0 +1,233 @@
+$blue: #0029FF
+
+/* cards */ 
+    
+.main
+    min-height: 80vh
+    width: 100%
+
+.cart__title
+    display: none
+    margin-top: 35px
+    margin-left: 5px
+
+.main__cards
+    margin-top: 30px
+    padding-bottom: 30px
+    width: 100%
+    display: none
+
+.main__cards_list
+    display: flex 
+    justify-content: space-between
+    align-items: center 
+    flex-wrap: wrap
+    padding-bottom: 100px
+
+.main__cards_item
+    width: 30% 
+    min-height: 550px 
+    border: 1px solid #000
+    border-radius: 20px 
+    display: flex 
+    flex-direction: column 
+    align-items: center
+    justify-content: space-around
+    margin-right: 15px
+    margin-top: 20px
+    & > span
+        width: 100%
+        padding-left: 35px
+
+.cards__item_heart
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    & > div
+        margin-right: 20px
+        margin-top: 10px
+
+.heart
+    cursor: pointer
+    outline: none
+    -webkit-appearance: none
+    -webkit-tap-highlight-color: transparent
+    .heart-flip 
+        margin-right: 20px
+        --base: 15px
+        --duration: .6s
+        --active: #ea4673
+        --inactive: #d1d6ee
+        width: var(--base)
+        height: calc(var(--base) + var(--base) / 2)
+        border-radius: calc(var(--base) / 2) calc(var(--base) / 2) 0 0
+        position: relative
+        transform-origin: 50% 66.66%
+        transform-style: preserve-3d
+        transform: rotate(var(--rotate, -45deg))
+        transition: background var(--duration), transform var(--duration) ease
+        background: var(--heart-background, var(--inactive))
+        &:before,
+        &:after 
+            content: ''
+            width: calc(var(--base) / 2)
+            height: var(--base)
+            border-radius: var(--pseudo-border-radius, calc(var(--base) / 2) 0 0 calc(var(--base) / 2))
+            position: absolute
+            left: var(--pseudo-left, -50%)
+            transform-origin: var(--pseudo-origin, 100%) 50%
+            bottom: 0
+            background: var(--heart-background, var(--inactive))
+            filter: brightness(var(--pseudo-filter, 50%))
+            transform: translateX(1%) rotateY(var(--pseudo-rotate, 90deg)) translateZ(0)
+            transition: background var(--duration), transform var(--duration) ease, filter var(--duration)
+        
+        &:after 
+            --pseudo-border-radius: 0 calc(var(--base) / 2) calc(var(--base) / 2) 0
+            --pseudo-left: 100%
+            --pseudo-origin: 0
+            filter: brightness(var(--pseudo-filter-second, 100%))
+            transform: translateX(-1%) rotateY(var(--pseudo-rotate-second, 0deg)) translateZ(0)
+        
+    
+    &.active 
+        .heart-flip 
+            --rotate: 45deg
+            --pseudo-filter: 100%
+            --pseudo-filter-second: 50%
+            --pseudo-rotate: 0deg
+            --pseudo-rotate-second: 90deg
+            --heart-background: var(--active)
+
+.heart 
+    background: none
+    border: none
+    padding: 0
+    transform: scale(var(--button-scale, 1)) translateZ(0)
+    transition: transform .2s
+    &:active 
+        --button-scale: .9
+
+
+.cards__item_heart
+    background: none
+    border: none
+    padding: 0
+    transform: scale(var(--button-scale, 1)) translateZ(0)
+    transition: transform .2s
+    &:active 
+        --button-scale: .95
+    
+
+.wrapper__image
+    width: 100%
+    height: 300px
+    display: flex
+    justify-content: center 
+    align-items: center
+    margin: 10px 0
+    & > img
+        max-width: 100%
+        max-height: 100%
+        cursor: pointer
+
+.cards__item_end
+    display: flex 
+    justify-content: space-between
+    align-items: center
+    width: 100% 
+    padding: 0 15px
+    & > h4
+        max-width: 50%
+    & > button 
+        width: 120px
+        height: 33px 
+        padding: 0 15px
+        background: $blue
+        border-radius: 20px
+        border: none
+        outline: none
+        color: #fff
+        font-size: 15px
+        cursor: pointer
+        position: relative
+        &::after
+            content: url('./../../images/check-mark-icon.svg')
+            position: absolute
+            bottom: -10px
+            left: 90px
+            visibility: hidden
+            transition: bottom .2s ease-in-out, visibility .2s ease-in-out
+        & > span
+            margin-right: 0
+            transition: margin-right .2s ease-in-out
+        &.add__toCart
+            &::after
+                bottom: 5px
+                visibility: visible
+                transition: bottom .2s ease-in-out, visibility .2s ease-in-out
+            & > span
+                margin-right: 20px
+                transition: margin-right .2s ease-in-out
+
+// Адаптив
+
+@media only screen and (max-width: 1000px) 
+
+    .container
+        padding-left: 15px
+        max-width: 700px
+
+    .main__container
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .beginning__main > button
+        width: 100px
+
+    .main__cards_list
+        justify-content: space-between
+
+    .main__cards_item
+        width: 300px 
+        margin-right: 50px
+        &:nth-child(odd)
+            margin-right: 0
+
+.hide
+    display: none
+
+.mainClear
+    padding: 40px 0
+    display: none
+    & > h2
+        font-size: 32px
+        font-family: 'Jost', sans-serif
+        font-weight: 600
+        line-height: 46px
+    & > p 
+        font-size: 15px
+        font-family: "Jost", sans-serif
+        font-weight: 400 
+        line-height: 21px
+        margin-top: 15px
+    & > a > button 
+        width: 120px
+        height: 40px
+        border: none 
+        outline: none 
+        border-radius: 20px
+        background-color: #0029FF
+        color: #ffff
+        font-family: "Jost", sans-serif
+        line-height: 23px
+        font-weight: 400
+        margin-top: 20px
+        cursor: pointer
+
+.block
+    display: block
+
+.flex
+    display: flex

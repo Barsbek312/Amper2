@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" defer></script>
+    <link rel="stylesheet" href="css/main-css/normalize.css">
+    <link rel="stylesheet" href="css/main-css/header-footer.css">
+    <link rel="stylesheet" href="css/favorites-css/favorites.css">
+    <script src="js/favoriteJs/favorite.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <title>Amper</title>
+</head>
+<body>
+    <div class="sidebar_shadow">
+        <div class="sidebar">
+            <h2>Каталог</h2>
+
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="header">
+
+        <div class="container header__container">
+
+            <div class="beginning__header">
+                <div class="header__left">
+                    <a href="index.html"><img src="images/logo.svg" alt="Logo"></a>
+                    <a href="index.html"><h1 class="title">Amper.kg</h1></a>
+                </div>
+    
+                <div class="header__right">
+                    <ul class="header__list">
+                        <li class="header__list_item"><a href="cart.html">Корзина</a></li>
+                        <li class="header__list_item"><a href="favorites.html">Избранное</a></li>
+                        <li class="header__list_item"><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="beginning__main">
+                <button id='catalog__btn'>Каталог</button>
+                <input placeholder="Напишите, чтобы найти товар" type="text" data-search>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="main">
+
+        <div class="container main__container">
+
+            <h2 class="cart__title">Избранное</h2>
+
+            <div class="main__cards">
+
+                <ul class="main__cards_list" data-topics-card-container>
+                    <template data-topics-template>
+                        <li class="main__cards_item">
+
+                            <div class="cards__item_heart">
+                                <button id="favoriteBtn" class="heart active">
+                                    <div class="heart-flip"></div>
+                                </button>
+                            </div>
+
+                            <div class="wrapper__image">
+                                <img src="" alt="Product image" data-image>
+                            </div>
+
+                            <div class="cards__item_end">
+                                <h4 data-title></h4>
+                                <button id="cartBtn" class=""><span>В корзину</span></button>
+                            </div>
+    
+                            <span data-price></span>
+
+                        </li>
+                    </template>
+                </ul>
+
+            </div>
+
+            <div class="mainClear">
+                <h2>У вас пока нет избранных</h2>
+                <p>Можете начать с главной страницы</p>
+                <a href="index.html"><button>Назад</button></a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container footer__container">
+
+            <div class="header__left">
+                <a href="index.html"><img src="images/logo.svg" alt="Logo"></a>
+                <a href="index.html"><h1 class="title title__footer">Amper.kg</h1></a>
+            </div>
+
+            <div class="footer__center">
+                <span>г. Бишкек</span>
+                <span>+996(704)-20-98-16</span>
+            </div>
+
+            <ul class="footer__list">
+                <li class="footer__list_item">
+                    <a href="https://www.instagram.com/amper_kg/?igshid=NmNmNjAwNzg%3D" target="_blank">
+                        <img src="images/instagram.png" alt="instagram">
+                    </a>
+                </li>
+                <li class="footer__list_item">
+                    <a href="https://lalafo.kg/amper_kg" target="_blank">
+                        <img src="images/lalafo-logo-removebg-preview.png" alt="lalafo">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </footer>
+
+</body>
+</html>

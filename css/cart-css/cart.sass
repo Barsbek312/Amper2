@@ -1,0 +1,412 @@
+/* cards */ 
+
+.main
+    min-height: 80vh
+    width: 100%
+
+.cart__title
+    display: none
+    margin-top: 35px
+    margin-left: 5px
+
+.main__cards
+    margin-top: 30px
+    padding-bottom: 30px
+    width: 100%
+    display: none
+    position: relative
+
+.main__cards_list
+    display: flex 
+    justify-content: space-between
+    align-items: center 
+    flex-wrap: wrap
+    padding-bottom: 100px
+    max-width: 70%
+
+.main__cards_item
+    width: 45% 
+    min-height: 550px 
+    border: 1px solid #000
+    border-radius: 20px 
+    display: flex 
+    flex-direction: column 
+    align-items: center
+    justify-content: space-around
+    margin-right: 15px
+    margin-top: 20px
+    & > span
+        width: 100%
+        padding-left: 35px
+        font-size: 24px
+        font-weight: 400
+
+.cards__item_heart
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    & > div
+        margin-right: 20px
+        margin-top: 10px
+
+.heart
+    cursor: pointer
+    outline: none
+    -webkit-appearance: none
+    -webkit-tap-highlight-color: transparent
+    .heart-flip 
+        margin-right: 20px
+        --base: 15px
+        --duration: .6s
+        --active: #ea4673
+        --inactive: #d1d6ee
+        width: var(--base)
+        height: calc(var(--base) + var(--base) / 2)
+        border-radius: calc(var(--base) / 2) calc(var(--base) / 2) 0 0
+        position: relative
+        transform-origin: 50% 66.66%
+        transform-style: preserve-3d
+        transform: rotate(var(--rotate, -45deg))
+        transition: background var(--duration), transform var(--duration) ease
+        background: var(--heart-background, var(--inactive))
+        &:before,
+        &:after 
+            content: ''
+            width: calc(var(--base) / 2)
+            height: var(--base)
+            border-radius: var(--pseudo-border-radius, calc(var(--base) / 2) 0 0 calc(var(--base) / 2))
+            position: absolute
+            left: var(--pseudo-left, -50%)
+            transform-origin: var(--pseudo-origin, 100%) 50%
+            bottom: 0
+            background: var(--heart-background, var(--inactive))
+            filter: brightness(var(--pseudo-filter, 50%))
+            transform: translateX(1%) rotateY(var(--pseudo-rotate, 90deg)) translateZ(0)
+            transition: background var(--duration), transform var(--duration) ease, filter var(--duration)
+        
+        &:after 
+            --pseudo-border-radius: 0 calc(var(--base) / 2) calc(var(--base) / 2) 0
+            --pseudo-left: 100%
+            --pseudo-origin: 0
+            filter: brightness(var(--pseudo-filter-second, 100%))
+            transform: translateX(-1%) rotateY(var(--pseudo-rotate-second, 0deg)) translateZ(0)
+        
+    
+    &.active 
+        .heart-flip 
+            --rotate: 45deg
+            --pseudo-filter: 100%
+            --pseudo-filter-second: 50%
+            --pseudo-rotate: 0deg
+            --pseudo-rotate-second: 90deg
+            --heart-background: var(--active)
+
+.heart 
+    background: none
+    border: none
+    padding: 0
+    transform: scale(var(--button-scale, 1)) translateZ(0)
+    transition: transform .2s
+    &:active 
+        --button-scale: .9
+
+
+.cards__item_heart
+    background: none
+    border: none
+    padding: 0
+    transform: scale(var(--button-scale, 1)) translateZ(0)
+    transition: transform .2s
+    &:active 
+        --button-scale: .95
+    
+
+.wrapper__image
+    width: 100%
+    height: 300px
+    display: flex
+    justify-content: center 
+    align-items: center
+    margin: 10px 0
+    & > img
+        max-width: 100%
+        max-height: 100%
+        cursor: pointer
+
+.cards__item_end
+    width: 100%
+    display: flex
+    padding: 0 35px 
+
+.cards__item_info
+    display: flex 
+    justify-content: space-between
+    align-items: flex-start
+    flex-direction: column
+    width: 100%
+    & > h4
+        max-width: 90%
+        font-weight: 400
+        font-size: 24px
+        margin-bottom: 30px
+
+.cards__counter
+    width: 43px
+    height: 90px
+    border: 1px solid #000
+    border-radius: 43px
+    display: flex 
+    flex-direction: column 
+    justify-content: space-around
+    align-items: center
+    & > button 
+        width: 22px 
+        height: 22px
+        background: transparent
+        border: 1px solid #000 
+        border-radius: 50%
+        display: flex 
+        justify-content: center 
+        cursor: pointer 
+
+.mainClear
+    padding: 40px 0
+    display: none
+    & > h2
+        font-size: 32px
+        font-family: 'Jost', sans-serif
+        font-weight: 600
+        line-height: 46px
+    & > p 
+        font-size: 15px
+        font-family: "Jost", sans-serif
+        font-weight: 400 
+        line-height: 21px
+        margin-top: 15px
+    & > a > button 
+        width: 120px
+        height: 40px
+        border: none 
+        outline: none 
+        border-radius: 20px
+        background-color: #0029FF
+        color: #ffff
+        font-family: "Jost", sans-serif
+        line-height: 23px
+        font-weight: 400
+        margin-top: 20px
+        cursor: pointer
+
+.main__counter
+    display: flex
+    flex-direction: column
+    border: 1px solid black
+    border-radius: 20px
+    height: 380px
+    width: 280px
+    padding: 30px
+    margin-left: 3%
+    flex: 1
+    position: fixed
+    right: 180px
+    margin-top: 20px
+
+.counter__conclusion
+    display: flex
+    justify-content: space-between
+    font-size: 26px
+    & > h4, strong 
+        font-weight: 600
+
+.counter__product
+    margin-top: 30px
+    font-size: 18px
+    & > span:last-child
+        margin-left: 15px
+
+.counter__btns
+    display: flex 
+    flex-direction: column
+    flex: 1
+    justify-content: center
+    align-items: center
+    & > button 
+        background: #0029FF
+        border-radius: 20px
+        width: 120px
+        height: 40px
+        border: none 
+        outline: none
+        color: #fff
+        cursor: pointer
+    & > a 
+        color: #0029FF
+        margin-top: 20px
+
+
+.block
+    display: block
+
+.flex
+    display: flex
+    justify-content: space-between
+
+.modal
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100vh
+    background-color: rgba(0, 0, 0, .2)
+    display: flex
+    opacity: 0
+    transform: translateX(100%)
+    justify-content: center 
+    align-items: center
+    transition: opacity .5s ease-in-out
+
+.modal__window
+    height: 368px
+    width: 304px
+    background-color: #fff 
+    border-radius: 20px
+    padding: 20px
+    .modal__form
+        height: 100%
+        display: flex 
+        flex-direction: column
+        justify-content: space-between
+        & > h3 
+            font-size: 32px
+            font-weight: 500
+        & > label
+            font-weight: 300 
+            font-size: 16px
+        & > input 
+            border: none 
+            outline: none
+            padding: 5px
+            padding-left: 0
+            border-bottom: 1px solid rgba(0, 0, 0, .8) 
+        & > button 
+            border: 1px solid #000 
+            border-radius: 20px
+            background: transparent
+            height: 54px
+            font-size: 20px
+            font-weight: 400 
+            cursor: pointer
+
+.after__click
+    height: 100%
+    display: flex 
+    flex-direction: column 
+    justify-content: center 
+    align-items: center 
+    text-align: center 
+    line-height: 25px
+    & > h4 
+        font-size: 18px
+
+@media only screen and (max-width: 1400px)
+    main
+        padding-bottom: 200px
+    .main__counter 
+        position: absolute
+        left: -17px
+        height: 201px
+        bottom: -90px
+        background: #fff
+        width: 98%
+        z-index: 2
+
+    .main__cards_list
+        max-width: none
+    
+@media only screen and (max-width: 1100px)
+    .container
+        margin-left: 25px
+
+@media screen and(max-width: 750px)
+    .main__cards_item
+        min-height: 0
+        height: 400px
+        padding: 15px
+        padding-bottom: 40px
+    .wrapper__image
+        height: 50%
+        width: 100%
+    .cards__item_info > h4 
+        font-size: 3vw
+    .cards__counter > button
+        margin: 5px
+    .cards__item_end
+        height: 30%
+
+@media only screen and (max-width: 600px)
+    .main
+        padding-bottom: 350px
+    .beginning__header
+        justify-content: center 
+        align-items: center
+        & > *:first-child
+            margin-right: 10px
+        & > *:last-child
+            margin-left: 10px
+    .beginning__main
+        justify-content: center
+        & > button
+            width: 27%
+    .main__cards
+        flex-direction: column
+        align-items: center
+    .main__cards_list
+        flex-direction: column
+        padding-bottom: 0
+    .cart__title
+        text-align: center
+    .main__cards_item
+        width: 300px
+        padding-bottom: 60px
+    .header__list
+        margin-bottom: -5px
+    .main__counter
+        width: 300px
+        padding: 15px
+        position: relative
+        margin-top: -40px
+    .counter__btns
+        margin-top: 15px
+    footer
+        max-height: none
+        min-height: 100px
+        padding: 15px 0px
+    .footer__container
+        flex-direction: column
+        & > *
+            margin-bottom: 15px
+            &:first-child
+                margin-bottom: 0
+    .footer__list
+        margin-left: 25px
+    .cards__item_info > h4 
+        font-size: 4vw
+
+@media only screen and (max-width: 520px)
+    .beginning__header
+        flex-direction: column
+
+    .beginning__main
+        margin-top: 50px
+
+    .header__list > li > a
+        font-size: 19px
+
+    .footer__center
+        flex-direction: inherit
+
+    .container__footer > *
+        margin-bottom: 20px
+
+.hide
+    display: none

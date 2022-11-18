@@ -1,0 +1,170 @@
+$blue: #0029FF
+
+*
+    font-family: "Jost", sans-serif
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    
+html, body
+    width: 100%
+    min-height: 100vh
+    background: #f5f5f5
+    position: relative
+
+ul
+    list-style: none
+
+.container
+    max-width: 1100px
+    padding-left: 15px
+    padding-right: 15px
+    margin: 0 auto
+
+/* header */
+
+.header__container
+    display: flex
+    flex-direction: column
+    // justify-content: space-between
+    // align-items: center
+    padding: 20px
+
+.beginning__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.header__left
+    display: flex
+    align-items: center
+    & > a 
+        text-decoration: none
+    & > img
+        cursor: pointer
+
+.title
+    margin-left: 15px
+    color: $blue
+    font-size: 32px
+    line-height: 46px
+    cursor: pointer
+
+.header__list
+    display: flex 
+    justify-content: space-between
+    & > li 
+        margin-right: 15px
+        & > a
+            text-decoration: none 
+            color: #000
+            font-size: 16px
+
+.beginning__main
+    width: 100%
+    display: flex 
+    align-items: center
+    & > button 
+        width: 11%
+        height: 49px 
+        border: 2px solid $blue
+        border-radius: 20px 
+        background: transparent
+        cursor: pointer
+        color: $blue
+    & > input 
+        width: 53%
+        height: 49px
+        border: 2px solid $blue
+        border-radius: 20px
+        background: transparent 
+        padding-left: 15px
+        padding-right: 15px
+        margin-right: 15px
+        margin-left: 30px
+
+/* footer */
+
+footer
+    position: absolute 
+    left: 0
+    bottom: 0
+    background: #A7A7A7
+    width: 100%
+    max-height: 130px
+
+.footer__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.title__footer
+    color: #000
+    margin-left: 15px
+    font-weight: 300 
+    letter-spacing: 0.205em
+
+.footer__center
+    display: flex 
+    flex-direction: column
+    align-items: center
+    line-height: 25px
+
+.footer__list
+    display: flex 
+    justify-content: space-between
+    align-items: center
+    & > li > a 
+        text-decoration: none 
+        & > img
+            max-width: 60px
+            max-height: 60px
+            &:last-child
+                max-width: 83px
+
+
+.hide
+    display: none
+
+// sidebar 
+
+.sidebar_shadow
+    position: fixed
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, 0.5)
+    z-index: 1
+    width: 100%
+    height: 100%
+    visibility: hidden
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
+    &.sidebar__visible
+        visibility: visible
+        .sidebar
+            transform: translateX(0)
+
+.sidebar
+    position: absolute
+    left: 0
+    width: 220px
+    height: 100%
+    background: #fff
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1)
+    transform: translateX(-100%)
+    transition: transform 0.3s ease-in-out
+    & > h2
+        font-size: 36px
+        font-weight: 500
+        line-height: 54px
+        letter-spacing: 6%
+        text-align: center
+        color: $blue
+        padding: 20px 0 10px
+    & > ul > li
+        padding: 20px 50px
+        font-size: 24px
+        color: $blue
+        border: 1px solid #ECECEC
+        margin-top: 5px
+        font-weight: 300
+        cursor: pointer

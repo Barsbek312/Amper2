@@ -1,0 +1,176 @@
+* {
+  font-family: 'Jost';
+}
+
+main {
+  margin-top: 50px;
+}
+
+.container-contacts {
+  width: 136px;
+  height: 46px;
+  font-weight: 600;
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.container-contacts::after {
+  content: '';
+  position: absolute;
+  background: url(./../../images/strelochka.svg);
+  width: 9px;
+  height: 17.14px;
+  top: 28%;
+  right: -8px;
+}
+
+.contact {
+  max-width: 1280px;
+  height: 280px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px 50px;
+}
+
+.contact-button {
+  width: 157px;
+  height: 50px;
+  border-radius: 4px;
+  margin-bottom: 50px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+}
+
+.contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+
+.contact-list > li {
+  position: relative;
+  margin-right: 80px;
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.contact-list > li::before {
+  content: " ";
+  background: black;
+  position: absolute;
+  left: -16px;
+  top: -30%;
+  height: 60px;
+  width: 1px;
+}
+
+@media screen and (max-width: 1060px) {
+  .contact-list > li {
+    margin-right: 40px;
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact {
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .contact {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-list > li {
+    margin-right: 40px;
+    font-size: 17px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 558px) {
+  footer {
+    max-height: 200px;
+    padding: 15px 0;
+  }
+  .beginning__main > input {
+    margin-left: 2.688vw;
+  }
+  .contact {
+    margin-top: -50px;
+  }
+  .beginning__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .title__footer {
+    display: none;
+  }
+  .header__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header__list > li {
+    margin-right: 15px;
+  }
+  .header__list > li > a {
+    font-size: 19px;
+  }
+  .beginning__main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 30px;
+  }
+  .beginning__main > button {
+    width: 19%;
+  }
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: -10px;
+  }
+  .footer__list {
+    margin-left: 25px;
+  }
+  .container-contacts {
+    margin-top: -20px;
+    margin-bottom: 60px;
+  }
+  .footer__container > * {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .beginning__main > button {
+    width: 25%;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
