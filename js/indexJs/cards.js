@@ -25,7 +25,7 @@ const topicsCardContainer = document.querySelector('[data-topics-card-container]
 let cards = [];
 
 
-let response = fetch("./cards/db.json")
+let response = fetch("https://amper2.vercel.app/cards/db.json")
 .then(res => res.json())
 .then(data => {
 
