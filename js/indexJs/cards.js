@@ -25,10 +25,11 @@ const topicsCardContainer = document.querySelector('[data-topics-card-container]
 let cards = [];
 
 
-let response = fetch("https://amper2.vercel.app/cards/db.json/cards")
+let response = fetch("https://amper2.vercel.app/cards/db.json")
 .then(res => res.json())
 .then(data => {
     console.log(data);
+    data = data["cards"];
     return cards = data.map(card => {
 
         const item = topicsCardTemplate.content.cloneNode(true).children[0];
