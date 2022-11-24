@@ -447,6 +447,7 @@
 .modal__window .modal__form > label {
   font-weight: 300;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 .modal__window .modal__form > input {
@@ -474,9 +475,7 @@
 
 .after__click {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -493,6 +492,21 @@
 
 .after__click > h4 {
   font-size: 18px;
+}
+
+.after__click > a > button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: #0029FF;
+  color: #ffff;
+  font-family: "Jost", sans-serif;
+  line-height: 23px;
+  font-weight: 400;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -652,6 +666,16 @@
 }
 
 .hide {
-  display: none;
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 /*# sourceMappingURL=cart.css.map */

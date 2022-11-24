@@ -28,7 +28,6 @@ let cards = [];
 let response = fetch("https://amper2.vercel.app/cards/db.json")
 .then(res => res.json())
 .then(data => {
-    console.log(data);
     data = data["cards"];
     return cards = data.map(card => {
 

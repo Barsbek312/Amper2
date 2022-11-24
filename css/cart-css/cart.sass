@@ -273,7 +273,7 @@
     padding: 20px
     .modal__form
         height: 100%
-        display: flex 
+        display: flex
         flex-direction: column
         justify-content: space-between
         & > h3 
@@ -282,6 +282,7 @@
         & > label
             font-weight: 300 
             font-size: 16px
+            margin-top: 10px
         & > input 
             border: none 
             outline: none
@@ -302,7 +303,7 @@
 
 .after__click
     height: 100%
-    display: flex 
+    display: none
     flex-direction: column 
     justify-content: center 
     align-items: center 
@@ -310,6 +311,19 @@
     line-height: 25px
     & > h4 
         font-size: 18px
+    & > a > button 
+        width: 120px
+        height: 40px
+        border: none 
+        outline: none 
+        border-radius: 20px
+        background-color: #0029FF
+        color: #ffff
+        font-family: "Jost", sans-serif
+        line-height: 23px
+        font-weight: 400
+        margin-top: 20px
+        cursor: pointer
 
 @media only screen and (max-width: 1400px)
     main
@@ -412,4 +426,10 @@
         margin-bottom: 20px
 
 .hide
-    display: none
+    display: none !important
+
+.block
+    display: block !important
+
+.flex 
+    display: flex !important

@@ -3,137 +3,65 @@
     {
       "title": "Сенсорный выключатель ",
       "price": "2400 сом",
-      "imageUrl": "images/products/1.JPG",
+      "imageUrl": "images/products/1.png",
       "product": "By sonoff",
       "id": "1"
     },
     {
       "title": "Мост wi-fi/rf ",
       "price": "1700 сом",
-      "imageUrl": "images/products/2.JPG",
+      "imageUrl": "images/products/2.png",
       "product": "By sonoff",
       "id": "2"
     },
     {
       "title": "Wi-fi разноцветная лампочка ",
       "price": "900 сом",
-      "imageUrl": "images/products/3.jpg",
+      "imageUrl": "images/products/3.png",
       "product": "By sonoff",
       "id": "3"
     },
     {
       "title": "Умная розетка ",
       "price": "1600 сом",
-      "imageUrl": "images/products/4.JPG",
+      "imageUrl": "images/products/4.png",
       "product": "By sonoff",
       "id": "4"
     },
     {
       "title": "Wi-fi реле ",
       "price": "900 сом",
-      "imageUrl": "images/products/5.JPG",
+      "imageUrl": "images/products/5.png",
       "product": "By sonoff",
       "id": "5"
     },
     {
       "title": "Wi-fi + механический выключатель реле ",
       "price": "1300 сом",
-      "imageUrl": "images/products/6.JPG",
+      "imageUrl": "images/products/6.png",
       "product": "By sonoff",
       "id": "6"
     },
     {
       "title": "Датчик открытия дверей и окон ",
       "price": "1300 сом",
-      "imageUrl": "images/products/7.JPG",
+      "imageUrl": "images/products/7.png",
       "product": "By sonoff",
       "id": "7"
     },
     {
       "title": "Wi-fi + rf реле ",
       "price": "1350 сом",
-      "imageUrl": "images/products/8.JPG",
+      "imageUrl": "images/products/8.png",
       "product": "By sonoff",
       "id": "8"
     },
     {
       "title": "Универсальный пульт 433 МГц ",
       "price": "450 сом",
-      "imageUrl": "images/products/9.JPG",
+      "imageUrl": "images/products/9.png",
       "product": "By sonoff",
       "id": "9"
-    }
-  ],
-  "favorites": [
-    {
-      "price": "900 сом",
-      "name": "Wi-fi разноцветная лампочка ",
-      "avatar": "images/products/3.jpg",
-      "id": "3"
-    },
-    {
-      "price": "900 сом",
-      "name": "Wi-fi реле ",
-      "avatar": "images/products/5.JPG",
-      "id": "5"
-    },
-    {
-      "price": "1300 сом",
-      "name": "Wi-fi + механический выключатель реле ",
-      "avatar": "images/products/6.JPG",
-      "id": "6"
-    },
-    {
-      "price": "1600 сом",
-      "name": "Умная розетка ",
-      "avatar": "images/products/4.JPG",
-      "id": "4"
-    },
-    {
-      "price": "2400 сом",
-      "name": "Сенсорный выключатель ",
-      "avatar": "images/products/1.JPG",
-      "id": "1"
-    }
-  ],
-  "cart": [
-    {
-      "price": "1600 сом",
-      "name": "Умная розетка ",
-      "avatar": "images/products/4.JPG",
-      "id": "4",
-      "num": "1"
-    },
-    {
-      "price": "1350 сом",
-      "name": "Wi-fi + rf реле ",
-      "avatar": "images/products/8.JPG",
-      "id": "8",
-      "num": "1"
-    },
-    {
-      "price": "900 сом",
-      "name": "Wi-Fi разноцветная лампочка ",
-      "avatar": "images/products/3.jpg",
-      "id": "3",
-      "num": "1"
-    },
-    {
-      "price": "900 сом",
-      "name": "Wi-fi реле ",
-      "avatar": "images/products/5.JPG",
-      "id": "5",
-      "num": "1"
-    },
-    {
-      "price": "2400 сом",
-      "id": "1",
-      "num": "2"
-    },
-    {
-      "price": "450 сом",
-      "id": "9",
-      "num": "3"
     }
   ]
 }

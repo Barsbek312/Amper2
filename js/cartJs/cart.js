@@ -199,22 +199,25 @@ const orderProducts = document.querySelector('#orderProducts');
 const allId = document.querySelectorAll('[data-id]');
 
 orderProducts.addEventListener("click", () => {
-
-    const allId = document.querySelectorAll('[data-id]');
-    modalElem.style.transform = 'translateX(100%)';
-    modalElem.style.opacity = '0';
-
-    let objForOrder = [];
-    [...allId].forEach(item => objForOrder.push(item.querySelector('[data-title]').textContent + ' - ' + item.querySelector('[data-number]').textContent + 'шт' + '\n'));
-
     let code = "1097635472:AAFR1gGCRh4A5gunrvutnkvWwZgC7nrlNgc";
     let chatId = "-878470820";
     let inputStreet = document.querySelector('#inputStreet');
     let inputHouse = document.querySelector('#inputHouse');
     let inputContact = document.querySelector('#inputContact');
     let inputAppartment = document.querySelector('#inputAppartment');
+    const checkInputs = document.querySelector('#checkInputs')
+    if(inputStreet.value.length == 0 ||  inputHouse.value.length == 0 || inputContact.value.length == 0) {
+        checkInputs.style.display = 'block';
+        return 0;   
+    
+    }else{
+        checkInputs.style.display = 'none';
+        const allId = document.querySelectorAll('[data-id]');
+        let objForOrder = [];
+        [...allId].forEach(item => objForOrder.push(item.querySelector('[data-title]').textContent + ' - ' + item.querySelector('[data-number]').textContent + 'шт' + '\n'));
+        
 
-    let text = `
+        let text = `
 Улица: ${inputStreet.value}
 
 Дом: ${inputHouse.value}
@@ -230,29 +233,36 @@ ${objForOrder.join('')}
 Всего товаров: ${document.querySelector('[data-amount]').textContent + 'шт'}
         `;
 
-    otpravka(code, text, chatId);
+        const mainCards = document.querySelector('.main__cards');
+        const cartTitle = document.querySelector('.cart__title');
+        const mainClear = document.querySelector('.mainClear');
+        const afterClick = document.querySelector('.after__click');
+        const modalForm = document.querySelector('.modal__form');
 
-    const mainCards = document.querySelector('.main__cards');
-    const cartTitle = document.querySelector('.cart__title');
-    const mainClear = document.querySelector('.mainClear');
+        otpravka(code, text, chatId);
 
-    mainClear.classList.add('block');
-    cartTitle.classList.remove('block');
-    mainCards.classList.remove('flex');
+        function otpravka(token, text, chatid) {
 
-    localStorage.removeItem('cart');
+            var z = $.ajax({  
 
-    function otpravka(token, text, chatid) {
+                type: "POST",  
+                url: "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chatid,
+                data: "parse_mode=HTML&text="+encodeURIComponent(text),
+                error: () => {alert('Заказ не был принят по техническим ошибкам, попробуйте еще раз')} 
 
-        var z = $.ajax({  
+            });
 
-            type: "POST",  
-            url: "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chatid,
-            data: "parse_mode=HTML&text="+encodeURIComponent(text), 
+            afterClick.classList.add('flex')
+            modalForm.classList.add('hide')
 
-        }); 
+            mainClear.classList.add('block');
+            cartTitle.classList.remove('block');
+            mainCards.classList.remove('flex');
 
-    };
+            localStorage.removeItem('cart');
+        };
+
+    }
 
 });
 

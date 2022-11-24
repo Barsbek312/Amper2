@@ -134,18 +134,19 @@
                     <label for="house">Дом</label>
                     <input required id="inputHouse" type="text" name="house">
                     <label for="appartment">Квартира</label>
-                    <input id="inputAppartment" type="text" name="appartment">
+                    <input id="inputAppartment" type="text" name="appartment" placeholder="Необязательно">
                     <label for="contact">Контакт</label>
                     <input required id="inputContact" type="text" name="contact">
-                    <button type="submit" id="orderProducts">Заказать</button>
+                    <span id="checkInputs" style="color: red; margin-top: 10px; display: none;">Вы не заполнили все необходимые поля</span>
+                    <button type="button" id="orderProducts">Заказать</button>
                 </form>
-                <div class="after__click" style="display: none;">
+                <div class="after__click">
                     <h4>Заказ был успешно принят</h4>
-                    <p>Ожидайте звонка для уточнения:)</p>
+                    <p style="margin-top: 30px;">Ожидайте звонка для уточнения:)</p>
+                    <a href="index.html"><button>Назад</button></a>
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer>
