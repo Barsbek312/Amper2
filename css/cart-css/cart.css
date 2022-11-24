@@ -418,7 +418,7 @@
 }
 
 .modal__window {
-  height: 368px;
+  height: auto;
   width: 304px;
   background-color: #fff;
   border-radius: 20px;
@@ -457,6 +457,10 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 
+.modal__window .modal__form > input:first-child {
+  margin-top: 15px;
+}
+
 .modal__window .modal__form > button {
   border: 1px solid #000;
   border-radius: 20px;
@@ -465,6 +469,7 @@
   font-size: 20px;
   font-weight: 400;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .after__click {
