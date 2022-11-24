@@ -1,5 +1,7 @@
 'use strict';
 
+localStorage.clear()
+
 const topicsCardTemplate = document.querySelector('[data-topics-template]');
 const topicsCardContainer = document.querySelector('[data-topics-card-container]');
 
