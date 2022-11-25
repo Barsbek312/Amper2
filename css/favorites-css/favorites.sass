@@ -25,7 +25,8 @@ $blue: #0029FF
     padding-bottom: 100px
 
 .main__cards_item
-    width: 30% 
+    width: 30%
+    min-width: 300px
     min-height: 550px 
     border: 1px solid #000
     border-radius: 20px 
@@ -138,6 +139,7 @@ $blue: #0029FF
     width: 100% 
     padding: 0 15px
     & > h4
+        font-weight: 400
         max-width: 50%
     & > button 
         width: 120px
@@ -231,6 +233,16 @@ $blue: #0029FF
 
 .flex
     display: flex
+
+@media screen and (max-width: 679px)
+    .main__cards_item
+        margin-right: 0px
+
+    .main__cards_list
+        justify-content: center
+
+    .main__cards
+        padding-bottom: 130px
 
 @media screen and (max-width: 558px)
     footer

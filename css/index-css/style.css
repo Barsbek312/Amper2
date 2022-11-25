@@ -204,6 +204,7 @@
 }
 
 .cards__item_info > h4 {
+  font-weight: 400;
   max-width: 90%;
 }
 
